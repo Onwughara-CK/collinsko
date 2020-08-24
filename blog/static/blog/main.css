@@ -9,15 +9,15 @@
 }
 
 .card {
-  border: 1px solid #ececec !important;
+  border: 1px solid #525355 !important;
 }
 
 .card-header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #525355;
 }
 
 .card-footer {
-  border-top: 1px solid #ececec;
+  border-top: 1px solid #525355;
 }
 
 body {
@@ -25,11 +25,11 @@ body {
 }
 
 nav {
-  border-bottom: 0.5px solid #ececec;
+  border-bottom: 0.5px solid #525355;
 }
 
 footer {
-  border-top: 1px solid #ececec !important;
+  border-top: 1px solid #525355 !important;
 }
 
 .bg-dark {

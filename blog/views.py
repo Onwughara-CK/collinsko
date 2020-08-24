@@ -23,7 +23,6 @@ class PostDetailView(generic.DetailView):
 class PostRedirectDetailView(RedirectView):
     permanent = True
     query_string = True
-    #pattern_name = 'blog:detail'
 
     def get_redirect_url(self, *args, **kwargs):
         post = get_object_or_404(Post, pk=kwargs['pk'])
