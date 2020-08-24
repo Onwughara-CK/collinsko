@@ -1,1 +1,22 @@
-<h1>HELLO Details</h1>
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<!-- Blog Post -->
+<div class="card mb-4">
+    <div class="card-header text-muted">
+        Posted on {{ post.date_posted | date:"F j, Y"  }} by
+        <a href="#">{{ post.author }}</a>
+    </div>
+    <div class="card-body">
+        <h2 class="card-title">{{ post.title }}</h2>
+        <p class="card-text">{{ post.content }}</p>
+    </div>
+    <div class="card-footer text-muted">
+        <i class="fa fa-facebook ml-2" aria-hidden="true"></i>
+        <i class="fa fa-twitter ml-2" aria-hidden="true"></i>
+        <i class="fa fa-reddit ml-2" aria-hidden="true"></i>
+    </div>
+</div>
+
+
+{% endblock content %}

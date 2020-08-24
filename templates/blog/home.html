@@ -1,1 +1,31 @@
-<h1>HELLO WORLD</h1>
+{% extends 'blog/base.html' %}
+{% block content %}
+<!-- Blog Post -->
+{% if posts %}
+{% for post in posts %}
+<div class="card mb-4">
+    <div class="card-body">
+        <h2 class="card-title">{{ post.title }}</h2>
+        <p class="card-text">{{ post.content | truncatechars:150 }}</p>
+        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+    </div>
+    <div class="card-footer text-muted">
+        Posted on {{ post.date_posted | date:"F j, Y"  }} by
+        <a href="#">{{ post.author }}</a>
+    </div>
+</div>
+
+<!-- Pagination -->
+{% if is_paginated %}
+<ul class="pagination justify-content-center mb-4">
+    <li class="page-item">
+        <a class="page-link" href="#">&larr; Prev</a>
+    </li>
+    <li class="page-item disabled">
+        <a class="page-link" href="#">Next &rarr;</a>
+    </li>
+</ul>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endblock %}
